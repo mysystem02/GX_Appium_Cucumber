@@ -1,15 +1,11 @@
 package utils;
-
-import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.android.AndroidDriver;
-import io.appium.java_client.ios.IOSDriver;
-import io.appium.java_client.remote.options.BaseOptions;
-import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.time.Duration;
+
+import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.remote.options.BaseOptions;
 
 public class DriverManager implements Constant {
 
@@ -27,7 +23,7 @@ public class DriverManager implements Constant {
                 .amend("appium:ensureWebviewsHavePages", true)
                 .amend("appium:nativeWebScreenshot", true)
                 .amend("appium:newCommandTimeout", 3600)
-//                .amend("noReset", true) //for session
+                .amend("noReset", true) //for session
                 .amend("appium:connectHardwareKeyboard", true);
 
 

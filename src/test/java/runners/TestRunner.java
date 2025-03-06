@@ -9,6 +9,7 @@ import org.testng.annotations.DataProvider;
         glue = "stepDefinitions",
         plugin = {"pretty", "html:target/cucumber-reports.html"},
         monochrome = true
+//tags = "@Profile" // Runs only ProfileSteps
 )
 public class TestRunner extends AbstractTestNGCucumberTests {
 
