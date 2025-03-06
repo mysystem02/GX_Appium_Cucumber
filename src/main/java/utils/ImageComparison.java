@@ -1,8 +1,18 @@
 package utils;
 
-import org.bytedeco.opencv.opencv_core.*;
-import org.bytedeco.opencv.opencv_imgcodecs.*;
+
 import org.bytedeco.opencv.opencv_imgproc.*;
+import org.opencv.core.Core;
+import org.opencv.core.Mat;
+import org.opencv.core.MatOfPoint;
+import org.opencv.core.Point;
+import org.opencv.core.Rect;
+import org.opencv.core.Scalar;
+import org.opencv.imgcodecs.Imgcodecs;
+import org.opencv.imgproc.Imgproc;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class ImageComparison {
 
@@ -42,6 +52,8 @@ public class ImageComparison {
         // Save the output image with highlighted differences
         Imgcodecs.imwrite(outputImagePath, img2);
         System.out.println("Comparison completed! Differences highlighted in: " + outputImagePath);
+
+
     }
 
     public static boolean isElementPresent(String fullImagePath, String elementImagePath) {
@@ -64,8 +76,12 @@ public class ImageComparison {
         boolean isButtonPresent = isElementPresent("screenshots/test.png", "screenshots/button.png");
         System.out.println("Button Found: " + isButtonPresent);
 
+
         //Highlight Differences (Mark UI Issues)
 
-
+//        Imgproc.rectangle(img1, new Point(mmr.maxLoc.x, mmr.maxLoc.y),
+//                new Point(mmr.maxLoc.x + element.cols(), mmr.maxLoc.y + element.rows()),
+//                new Scalar(0, 0, 255), 3);
+//        Imgcodecs.imwrite("screenshots/mismatch.png", img1);
     }
 }
