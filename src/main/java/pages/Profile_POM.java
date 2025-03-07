@@ -8,18 +8,14 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import utils.DriverManager;
+import utils.Driver_for_POM;
 
 import java.time.Duration;
 
-public class Profile_POM {
-
-    private AppiumDriver driver;
-    private WebDriverWait wait;
+public class Profile_POM extends Driver_for_POM {
 
     public Profile_POM() {
-        this.driver = DriverManager.getDriver();
-        PageFactory.initElements(new AppiumFieldDecorator(driver), this);
-        this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+      super();
     }
     @AndroidFindBy(xpath = "(//android.widget.EditText)[2]\n")
     private WebElement phoneNumber;
