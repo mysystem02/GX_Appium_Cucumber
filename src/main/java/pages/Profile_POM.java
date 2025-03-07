@@ -31,6 +31,4 @@ public class Profile_POM {
         phoneNumber.click();
         phoneNumber.sendKeys(ph);
     }
-
-
 }

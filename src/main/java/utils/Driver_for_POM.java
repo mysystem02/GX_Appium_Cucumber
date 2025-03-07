@@ -15,6 +15,5 @@ public class Driver_for_POM {
         this.driver = DriverManager.getDriver();
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-
     }
 }

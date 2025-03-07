@@ -1,14 +1,23 @@
 package stepDefinitions;
 
 import io.cucumber.java.en.*;
+
+import org.openqa.selenium.Point;
 import org.openqa.selenium.WebDriver;
+
+import pages.Menu_POM;
+import pages.Profile_POM;
 import pages.Sign_in_POM;
 import utils.DriverManager;
-import utils.ImageComparison;
+import utils.Swipe;
 
-public class SignInSteps {
+public class TestSteps {
     WebDriver driver;
     Sign_in_POM SignIn;
+    Menu_POM menu;
+    Profile_POM profile;
+
+    //for Sign_in feature
 
     @Given("User launches the app on {string}")
     public void user_launches_the_app(String platform) {
@@ -58,6 +67,16 @@ public class SignInSteps {
     @Then("I should see the home screen")
     public void i_should_see_the_home_screen() {
         SignIn.verifyHomePage();
+    }
+
+
+    @And("User change {string}")
+    public void user_change_phone_number(String ph)
+    {
+        menu.tabMenuButton();
+        menu.tapProfile();
+        Swipe.swipeAction(new Point(371, 1318), new Point(286, 333));
+        profile.enterPhoneNumber(ph);
     }
 
 }

@@ -12,7 +12,7 @@ Feature: Mobile Login Functionality
     Then I should see the home screen
 
     Examples:
-      | username     | password  |
+      | username       | password |
       | user1@test.com | pass123  |
       | user2@test.com | pass456  |
       | user3@test.com | pass789  |
