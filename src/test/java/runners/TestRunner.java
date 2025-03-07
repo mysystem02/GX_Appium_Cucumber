@@ -5,7 +5,7 @@ import io.cucumber.testng.CucumberOptions;
 import org.testng.annotations.DataProvider;
 
 @CucumberOptions(
-        features = "src/test/java/features",
+        features = "src/test/java/features/Reimbursement.feature",
         glue = "stepDefinitions",
         plugin = {"pretty", "html:target/cucumber-reports.html"},
         monochrome = true

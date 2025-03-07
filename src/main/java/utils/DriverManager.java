@@ -23,7 +23,7 @@ public class DriverManager implements Constant {
                 .amend("appium:ensureWebviewsHavePages", true)
                 .amend("appium:nativeWebScreenshot", true)
                 .amend("appium:newCommandTimeout", 3600)
-                .amend("noReset", true) //for session
+//                .amend("noReset", true) //for session
                 .amend("appium:connectHardwareKeyboard", true);
 
 
