@@ -9,7 +9,7 @@ import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 
 public class Driver_for_POM {
-    public AppiumDriver driver;
+    public static AppiumDriver driver;
     public WebDriverWait wait;
     public Driver_for_POM(){
         this.driver = DriverManager.getDriver();
