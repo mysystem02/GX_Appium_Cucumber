@@ -11,7 +11,7 @@ public class DriverManager implements Constant {
 
     public static AppiumDriver drivers;
 
-    public static void initializeDriver(String platform) {
+    public static void initializeDriver() {
         var options = new BaseOptions<>()
                 .amend("platformName", platformName_value)
 //                .amend("appium:platformVersion", platformVersion_value)

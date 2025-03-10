@@ -72,4 +72,8 @@ public class Sign_in_POM extends Driver_for_POM {
             throw new AssertionError("Home page not displayed.");
         }
     }
+
 }
+
+
+
